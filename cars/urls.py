@@ -21,5 +21,4 @@ urlpatterns = [
     path('fuel/form/', views.fuel_form),
     path('fuel/<int:fuel_id>/edit/', views.fuel_edit),
     path('fuel/delete/<int:fuel_id>/', views.fuel_delete)
-
 ]
