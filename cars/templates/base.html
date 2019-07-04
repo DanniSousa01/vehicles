@@ -15,7 +15,7 @@
 
     <!-- Bootstrap core CSS     -->
     <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet" />
-
+    <link rel="stylesheet" href="css/bootstrap.css">
     <!-- Animation library for notifications   -->
     <link href="{% static 'assets/css/animate.min.css' %}" rel="stylesheet" />
 
@@ -37,7 +37,7 @@
 <body>
 
     <div class="wrapper">
-        <div class="sidebar" data-color="blue" data-image="{% static 'assets/img/sidebar-4.jpeg' %}">
+        <div class="sidebar" data-color="blue" data-image="{% static 'assets/img/car23.jpg' %}">
 
             <!--
 
@@ -45,14 +45,12 @@
         Tip 2: you can also add an image using data-image tag
 
     -->
-
             <div class="sidebar-wrapper">
-    
+
                 <div class="logo">
                     <a href="/cars/" class="simple-text">
                         Dani's Veiculos
                     </a>
-                    
                 </div>
                 <ul class="nav">
                     <li class="">
@@ -85,12 +83,13 @@
                             <p>DANNI'S VEÍCULOS</p>
                         </a>
                     </li>
+                    <li>
+                        <a href="/accounts/logout/">Logout</a>
+                    </li>
                 </ul>
                 </ul>
             </div>
-           
         </div>
-
         <div class="main-panel">
             <nav class="navbar navbar-default navbar-fixed">
                 <div class="container-fluid">
@@ -102,30 +101,29 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="/cars/">Dani's Veiculos</a>
+                        <a class="navbar-brand" href="/cars/">Dani's Veiculos </a>
                     </div>
 
                 </div>
             </nav>
-            
+
             <div class="content">
                 <div class="container-fluid">
                     {% block daniela %}
-                    
+
                     {% endblock %}
                 </div>
             </div>
+            <!--Rodapé-->
+            <footer class="footer">
+                <div class="container-fluid">
+                    <p class="copyright pull-right">
+                        &copy; Daniela Sousa &copy; (89) 99418-6605
+                    </p>
+                </div>
+            </footer>
         </div>
     </div>
-    
-    <footer class="footer">
-        <div class="container-fluid">
-            <p class="copyright pull-right">
-                &copy; Daniela Coelho e Daniela Sousa &copy;(89) 99432-3702 / (89) 99418-6605
-            </p>
-        </div>
-    </footer>
-
 </body>
 
 <!--   Core JS Files   -->
@@ -143,10 +141,11 @@
 
 <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
 <script src="{% static 'assets/js/light-bootstrap-dashboard.js' %}"></script>
-
+<!-- Dependência jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.Bootstrapcdn.com/Bootstrap/3.3.2/js/Bootstrap.min.js"></script>
 <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
 <script src="{% static 'assets/js/demo.js' %}"></script>
-
 <script type="text/javascript">
     $(document).ready(function () {
 

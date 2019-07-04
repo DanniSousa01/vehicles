@@ -6,15 +6,9 @@ from .forms import VehicleForm, ManufacturerForm, FuelForm
 # Create your views here.
 
 def home(request): 
-    num_user = Vehicle.objects.count()
-    num_visits = request.session.get('num_visits', 0)
-    request.session['num_visits'] = num_visits + 1
-
-    context = {
-        'num_user': num_user,
-        'num_visits': num_visits,
-    }
-    return render (request, 'home.html', context = context)
+    visitante = request.session.get('visitante', 0)
+    request.session['visitante'] = visitante + 1
+    return render (request, 'home.html')
  
 def vehicle_list(request):
     if (request.method == 'POST'):
