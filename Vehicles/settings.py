@@ -32,6 +32,8 @@ LOGIN_REDIRECT_URL = '/cars/'
 #Logout
 LOGOUT_REDIRECT_URL="/accounts/login"
 
+EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
 # Application definition
 
 INSTALLED_APPS = [
